@@ -1,0 +1,49 @@
+<head> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid"> 
+                             
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Movies</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+          </li>
+      </ul>  
+      {% if user.is_authenticated %}                        
+            Welcome, {{ user.username }}            
+            <a href="{% url 'logoutaccount' %}" class="btn btn-outline-secondary">Log out</a>            
+        {% else %}        
+            <a href="{% url 'loginaccount' %}" class="btn btn-outline-primary">Login</a>
+            <a href="{% url 'signupaccount' %}" class="btn btn-outline-secondary">Sign Up</a>            
+        {% endif %}
+  </div>
+</nav>  
+
+<div class="container">
+    {% block content %}
+    {% endblock content %}  
+</div>
+
+<footer class="bg-light text-center ">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/SaintDrRamRahimMSG" role="button">Facebook<i class="fab fa-facebook-f"></i></a>
+
+
+
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="https://www.saintdrmsginsan.me/" role="button">Website<i class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/saintdrmsginsan/" role="button">Instagram<i class="fab fa-instagram"></i></a>
+    </section>
+  </div>
+</footer>      
