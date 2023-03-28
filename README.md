@@ -5,7 +5,10 @@ Concepts used - Django Forms , User authentication, Permissions, Foreign Keys an
 Technologies used - Python, HTML, CSS, Django, db.sqlite3.
 
 To run this app in your local system follow these steps :
-1. Open the terminal clone the repositiory in your local system by typing in  git clone https://github.com/Jatin-G-debu/Movie-review
-2. Ensure that python and django are installed in your sys3. 
-3. Change directory to this project 
-4. Type in the terminal - python manage.py runserver to start a local server on your machine . Then, go to the url generated and you can see the app is running
+1. Open the terminal clone the repositiory in your local system by typing in 
+git clone https://github.com/Jatin-G-debu/Movie-review
+2. Ensure that python and django are installed in your system . 
+3. Change your directory to this project 
+4. Type in the terminal - 
+python manage.py runserver 
+This will start a local web server on your machine . Then, go to the url generated and you can see the app running. 
